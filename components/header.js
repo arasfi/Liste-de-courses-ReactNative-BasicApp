@@ -1,16 +1,16 @@
 import React from 'react';
 import { View, Text, StyleSheet} from 'react-native'
 
-const Header = () => {
+const Header = (props) => {
     return ( 
         <View style={styles.header}>
-            <Text style={styles.text} >Hello World</Text>
+            <Text style={styles.text} >{props.title}</Text>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
+    header: {
         height: 60,
         padding: 15,
         backgroundColor: 'darkslateblue'
