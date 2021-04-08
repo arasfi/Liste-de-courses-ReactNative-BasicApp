@@ -7,10 +7,10 @@ import AddItem from './components/AddItem';
 const App = () => {
 
     const [items, setItems] = useState([
-        {id: 1, text: 'Milk'},
-        {id: 2, text: 'Eggs'},
-        {id: 3, text: 'Bread'},
-        {id: 4, text: 'Juice'},
+        {id: 1, text: 'Lait'},
+        {id: 2, text: 'Oeufs'},
+        {id: 3, text: 'Pain'},
+        {id: 4, text: 'Jus'},
     ])
 
     const deleteItem = (id) => {
@@ -22,7 +22,7 @@ const App = () => {
     const addItem = (text) => {
         if (!text) 
         {
-            Alert.alert('Error', 'Please enter an item.')
+            Alert.alert('Erreur', 'Tapez un element SVP!')
         }
         else
         {
@@ -34,7 +34,7 @@ const App = () => {
 
     return ( 
         <View style={styles.container}>
-            <Header title="Shopping List" />
+            <Header title="Liste de courses" />
             <AddItem addItem={addItem} />
             <FlatList
              data = {items}
